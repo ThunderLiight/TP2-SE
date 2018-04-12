@@ -1,5 +1,5 @@
 @echo off
-goto :question5
+goto :question16
 pause > nul
 goto :EOF
 
@@ -18,7 +18,7 @@ pause > nul
 goto :EOF
 
 :question3
-copy c:\TP2\actuel.txt A:\420-S24-JO\Batch
+copy .\batch.txt A:\420-S24-JO\Batch
 pause > nul
 goto :EOF
 
@@ -35,7 +35,6 @@ sort /R A:\420-S24-JO\texte\exe.txt /O A:\420-S24-JO\texte\exe.txt
 pause > nul
 goto :EOF
 
-rem ...
 :question6
 SETLOCAL enableextensions enabledelayedexpansion
 
@@ -55,7 +54,7 @@ for /r "C:\" %%F in (*) do (
 pause > nul
 goto :EOF
 
-rem ...
+
 :question7
 for /r "C:\" %%J in (*.sys) do (echo %%J >> A:\420-S24-JO\texte\systeme.txt)
 pause > nul
@@ -63,9 +62,9 @@ goto :EOF
 
 :question8
 rem le commutateur /N=X dans le commande COMP effectue la comparaison entre deux fichiers
-rem mais pour les X premiÃ¨res lignes c'est particuliÃ¨rement utile si l'on veut comparer
-rem deux fichiers qui ont le "mÃªme" dÃ©but mais dont la fin diffÃ¨re. On pourra alors 
-rem extirper les diffÃ©rences contenues uniquement dans le dÃ©but des fichiers.
+rem mais pour les X premières lignes c'est particulièrement utile si l'on veut comparer
+rem deux fichiers qui ont le "même" début mais dont la fin diffère. On pourra alors 
+rem extirper les différences contenues uniquement dans le début des fichiers.
 
 :question9
 copy c:\Windows\System32\write.exe A:\420-S24-JO\Programmes\ & ren A:\420-S24-JO\Programmes\write.exe Ecrire.exe
