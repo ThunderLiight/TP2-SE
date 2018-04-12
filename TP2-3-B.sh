@@ -1,37 +1,37 @@
 #!/usr/bin/env bash
 j=1
 
-for((i=1; i <= $#; i++))
+for((i=1; i<=$#; i++))
 
 do
-	while [ !$($j) =~/d+ ]
+	while [ !$($j)=~/d+ ]
 	do ((j++))
 	done
 
 done
 
-if [  $($j)=~/d+ ]
+if [ $($j)=~/d+ ]
 then 
 	nb1=$($j)
 	((j++))
 fi
 
-for((i=1; i <= $#; i++))
+for((i=1; i<=$#; i++))
 
 do
-	while [ !$($j) =~/d+ ]
+	while [ !$($j)=~/d+ ]
 	do ((j++))
 	done
 
 done
 
-if [ $($j) =~/d+ ]
+if [ $($j)=~/d+ ]
 then 
 	nb2=$($j)
 	((j++))
 fi
 
-for ((i=$j; i <= $#; i++))
+for ((i=$j; i<=$#; i++))
 
 do
 
@@ -43,11 +43,11 @@ do
 	((j++))
 	nb1=$nb2
 
-	for ((i=$j; i <= $#; i++))
+	for ((i=$j; i<=$#; i++))
 	
 	do
 	
-		if [ $((i+1)) =~/d+ ]
+		if [ $((i+1))=~/d+ ]
 		then nb2=$((i+1))
 		else ((i++))
 		fi
@@ -60,10 +60,10 @@ echo $max
 
 j=1
 
-for((i=1; i <= $#; i++))
+for((i=1; i<=$#; i++))
 
 do
-	while [ !$($j) =~/d+ ]
+	while [ !$($j)=~/d+ ]
 	do ((j++))
 	done
 
@@ -75,22 +75,22 @@ then
 	((j++))
 fi
 
-for((i=1; i <= $#; i++))
+for((i=1; i<=$#; i++))
 
 do
-	while [ !$($j) =~/d+ ]
+	while [ !$($j==~/d+ ]
 	do ((j++))
 	done
 
 done
 
-if [ $($j) =~/d+ ]
+if [ $($j)=~/d+ ]
 then 
 	nb2=$($j)
 	((j++))
 fi
 
-for ((i=$j; i <= $#; i++))
+for ((i=$j; i<=$#; i++))
 
 do
 
@@ -102,11 +102,11 @@ do
 	((j++))
 	nb1=$nb2
 
-	for ((i=$j; i <= $#; i++))
+	for ((i=$j; i<=$#; i++))
 	
 	do
 	
-		if [ $((i+1)) =~/d+ ]
+		if [ $((i+1))=~/d+ ]
 		then nb2=$((i+1))
 		else ((i++))
 		fi

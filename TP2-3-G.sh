@@ -7,4 +7,3 @@ do tab=([i]=$RANDOM)
 done
 
 var=${tab[*]}
-echo $var
