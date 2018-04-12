@@ -1,6 +1,4 @@
-﻿#très long et pas tout a fait trié...+/- 25 sec
-
-Clear-Host
+﻿Clear-Host
 function getOctets {
    param ([string]$chemin)
 
@@ -9,31 +7,16 @@ function getOctets {
     return $i
 }
 
-#$chemins=@(Get-ChildItem -File -Path . -Recurse -Name| Sort-Object -Descending -Property length)
-$chemins=@(Get-ChildItem -File -Path . -Recurse | Sort-Object -Descending -Property length)
-$noms=@(Get-ChildItem -File -Path . -Recurse | Sort-Object -Descending -Property length| Select-Object -Property @{Expression = "Name"})
+$donnees=@()
+$chemins=@(Get-ChildItem -File -Path . -Recurse -Name)
+$noms=@(Get-ChildItem -File -Path . -Recurse | Select-Object -Property @{Expression = "Name"})
 
 for ($i = 0; $i -lt $noms.Count; $i++) 
 { 
-    $tailleOctets+=@(getOctets $chemins[$i])
+    $tailleOctets=getOctets $chemins[$i]
+    $donnees+=@("$($noms[$i]) - $($tailleOctets) $("Octets")")
 }
 
-
-for ($i = 0; $i -lt $noms.Count; $i++) 
-{ 
-    $donnees+=@("$($noms[$i]) - $($tailleOctets[$i]) $("Octets")")
-}
-
+$donnees | Sort-Object -Descending
 $donnees
 
-$chemins.Count
-$noms.Count
-$tailleOctets.Count
-$donnees.Count
-
-
-$donnees=@()
-$tailleOctets=@()
-
-
-#Get-ChildItem -File -Path . -Recurse | sort-object -Descending -property length
