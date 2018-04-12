@@ -1,6 +1,7 @@
-﻿#petite erreur?
+﻿#fonctionne PowerShell 4.0 Windows 8.1
+
 Clear-Host
-$Pross=Read-Host "Entrez un nom de processus ou son ID"
+[String]$Pross=Read-Host "Entrez un nom de processus ou son ID"
 
 if ($Pross -match '^\d+$'){ 
     [int]$Pross=$Pross 

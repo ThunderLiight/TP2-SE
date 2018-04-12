@@ -1,4 +1,5 @@
-﻿#fonctionne, mais fait des doublons et la sortie ne prend as en charge les saut de lignes
+﻿#fonctionne PowerShell 4.0 Windows 8.1
+
 Clear-Host
 $path=@(Get-ChildItem -File -Path . -Recurse -Name)
 $noms=@(Get-ChildItem -File -Path . -Recurse | Select-Object -Property @{Expression = "Name"})

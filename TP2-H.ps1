@@ -1,4 +1,6 @@
-﻿Clear-Host
+﻿#fonctionne PowerShell 4.0 Windows 8.1
+
+Clear-Host
 function getOctets {
    param ([string]$chemin)
 
@@ -20,3 +22,6 @@ for ($i = 0; $i -lt $noms.Count; $i++)
 $donnees | Sort-Object -Descending
 $donnees
 
+
+$donnees=@()
+$tailleOctets=@()

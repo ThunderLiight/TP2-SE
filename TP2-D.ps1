@@ -1,4 +1,5 @@
-﻿#fonctionne
+﻿#fonctionne PowerShell 4.0 Windows 8.1
+
 Clear-Host
 Param(
   [String]$LaDate
