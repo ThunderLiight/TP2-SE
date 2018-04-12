@@ -1,5 +1,5 @@
 @echo off
-goto :question3
+goto :question16
 pause > nul
 goto :EOF
 
@@ -18,7 +18,7 @@ pause > nul
 goto :EOF
 
 :question3
-copy c:\TP2\actuel.txt A:\420-S24-JO\Batch
+copy .\batch.txt A:\420-S24-JO\Batch
 pause > nul
 goto :EOF
 
@@ -35,7 +35,6 @@ sort /R A:\420-S24-JO\texte\exe.txt /O A:\420-S24-JO\texte\exe.txt
 pause > nul
 goto :EOF
 
-rem ...
 :question6
 SETLOCAL enableextensions enabledelayedexpansion
 
@@ -55,7 +54,7 @@ for /r "C:\" %%F in (*) do (
 pause > nul
 goto :EOF
 
-rem ...
+
 :question7
 for /r "C:\" %%J in (*.sys) do (echo %%J >> A:\420-S24-JO\texte\systeme.txt)
 pause > nul
